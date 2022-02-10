@@ -7,7 +7,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 
-// aqui iremos incluir tudo que será visto na página home
 export default function Home(props) {
 
 
@@ -49,9 +48,8 @@ export default function Home(props) {
         </TouchableOpacity>
         
         {     
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{paddingHorizontal: 15}}>
                     <FlatList
-                        numColumns={20}
+                        horizontal  
                         data={dados}
                         keyExtractor={({id}, index) => id} 
                         renderItem={({item}) =>(               
@@ -66,7 +64,7 @@ export default function Home(props) {
                          </>                                  
                         )}  
                     />
-                       </ScrollView>   
+                       
                        
             }
         </ScrollView>
@@ -98,9 +96,9 @@ export default function Home(props) {
         margin: vw(1.5)
     },
     text: {
-        fontSize: vw(5),
+        fontSize: vw(7),
         position: 'absolute',
-        backgroundColor: 'black',
+        backgroundColor: 'rgba(52, 52, 52, 0.6)',
         color: 'white',
         fontWeight: 'bold',
         margin: vw(2)
